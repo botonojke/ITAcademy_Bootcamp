@@ -9,7 +9,6 @@ books = sqlalchemy.Table(
     sqlalchemy.Column('author_id', sqlalchemy.Integer, sqlalchemy.ForeignKey('authors.id'), nullable=False),
     sqlalchemy.Column('title', sqlalchemy.String),
     sqlalchemy.Column('description', sqlalchemy.String),
-    sqlalchemy.Column('create_date', sqlalchemy.DateTime, default=datetime.datetime.utcnow),
-    sqlalchemy.Column('update_date', sqlalchemy.DateTime, default=datetime.datetime.utcnow),
+    sqlalchemy.Column('publishing_time', sqlalchemy.DateTime, default=datetime.datetime.utcnow),
 )
 
