@@ -1,6 +1,5 @@
 from fastapi import Depends, HTTPException, status
 
-from core.security import JWTBearer, decode_access_token
 from repositories.author import AuthorRepository
 from repositories.books import BooksRepository
 
