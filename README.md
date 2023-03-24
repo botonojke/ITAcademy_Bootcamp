@@ -8,4 +8,5 @@ A compact web service that allows you to work with authors and books on FastAPI
 4. Create migrations by `docker-compose exec web alembic revision --autogenerate -m "init"`
 5. Run migrations by `docker-compose exec web alembic upgrade head`
 6. Open http://localhost:8080/docs/ in browser
+
 If you have an error on a Linux system added `sudo` before run the command
