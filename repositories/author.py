@@ -4,7 +4,7 @@ from typing import List, Optional
 from db.author import author
 
 
-class BooksRepository(BaseRepository):
+class AuthorRepository(BaseRepository):
 
     async def create_author(self, item: Author) -> Author:
         authors = Author(
@@ -28,7 +28,7 @@ class BooksRepository(BaseRepository):
         await self.database.execute(query=query)
         return authors
 
-    async def all_author(self, limit: int = 100, skip: int = 0) -> List[Author]:
+    async def all_authors(self, limit: int = 100, skip: int = 0) -> List[Author]:
         query = author.select().limit(limit).offset(skip)
         data = await self.database.fetch_all(query=query)
         return [Author(**item) for item in data]
